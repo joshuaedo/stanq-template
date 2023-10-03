@@ -5,6 +5,10 @@ node_modules
 .pnp
 .pnp.js
 
+# ide
+.vscode/
+.codesandbox/
+
 # testing
 coverage
 

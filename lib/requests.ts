@@ -1,21 +1,25 @@
+import { FactType } from "@/types/validators"
 import { toast } from "@/hooks/use-toast"
-import { PexelsPhoto } from "../types/photos"
-import { axiosInstance } from "./axios"
 
-export const fetchPhotos = async (): Promise<ImagesResults | undefined> => {
+import { axiosNinjasInstance } from "./axios"
+
+export const fetchFacts = async (): Promise<FactType[] | undefined> => {
   try {
-    const res = await axiosInstance.get(`/c`, {
+    const res: any = await axiosNinjasInstance.get(`/facts`, {
       params: {
-        page: 1,
+        limit: 1,
       },
     })
-    const parsedData: ImagesResults = res.data
-
+    console.log(res)
+    const parsedData: FactType[] = res.data
     console.log(parsedData)
-
-    return parsedData 
+    return parsedData
   } catch (error) {
+    toast({
+      description: "Error fetching facts",
+      variant: "destructive",
+    })
+    console.error("Error fetching facts:", error)
     throw error
   }
 }
-
