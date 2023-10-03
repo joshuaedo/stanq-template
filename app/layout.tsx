@@ -1,14 +1,13 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { siteConfig, siteFont } from "@/config/site"
+
+import { siteConfig } from "@/config/site"
+import { bebasNeue, generalSans, inter } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import Footer from "@/components/layout/Footer"
 import { Header } from "@/components/layout/Header"
 import Providers from "@/components/layout/Providers"
 import { Toaster } from "@/components/layout/Toaster"
-
-const inter = Inter({ subsets: ["latin"] })
 
 const { description, title, images, siteName, creator, url } = siteConfig
 
@@ -61,11 +60,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head>
-          <link rel="stylesheet" href={siteFont.url} />
+          <link rel="stylesheet" href={bebasNeue.variable} />
+          <link rel="stylesheet" href={generalSans.variable} />
         </head>
         <body
           className={cn(
-            "general-sans min-h-screen bg-background font-sans antialiased"
+            "min-h-screen bg-background font-sans antialiased",
+            inter.variable
           )}
         >
           <Providers>
