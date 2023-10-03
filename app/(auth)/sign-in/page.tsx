@@ -1,17 +1,20 @@
+import { siteConfig } from "@/config/site"
 import SignInFireWall from "@/components/auth/SignInFireWall"
 
+const { title } = siteConfig
+
+const signInMetaData = () => {
+  return {
+    title: title,
+    description: `Sign in to your ${title} account.`,
+  }
+}
+
 export const metadata = {
-  title: "Sign In to Galleria",
-  description: "Sign in to your Galleria account.",
-  openGraph: {
-    title: "Sign In to Galleria",
-    description: "Sign in to your Galleria account.",
-  },
-  twitter: {
-    card: "summary",
-    title: "Sign In to Galleria",
-    description: "Sign in to your Galleria account.",
-  },
+  title,
+  description: `Sign in to your ${title} account.`,
+  openGraph: signInMetaData,
+  twitter: signInMetaData,
 }
 
 const SignInPage = () => {
