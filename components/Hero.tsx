@@ -14,11 +14,7 @@ import Loader from "./ui/Loader"
 interface HeroProps {}
 
 export const Hero: FC<HeroProps> = ({}) => {
-  const {
-    data: facts,
-    isFetched,
-    isFetching,
-  } = useQuery({
+  const { data, isFetched, isFetching } = useQuery({
     queryFn: () => fetchFacts(),
     queryKey: ["facts"],
     enabled: true,
@@ -53,7 +49,7 @@ export const Hero: FC<HeroProps> = ({}) => {
       <p>Here&apos;s a random fact:</p>
 
       {isFetching && <Loader />}
-      {isFetched && facts && <p>{facts[0]}</p>}
+      {isFetched && data && <p>{data[0].fact}</p>}
     </section>
   )
 }
