@@ -21,8 +21,8 @@ export const Hero: FC<HeroProps> = ({}) => {
   })
 
   return (
-    <section className="w-full px-20">
-      <h1 className="space-y-4 pt-20 text-4xl font-medium md:text-5xl">
+    <section className="w-full space-y-4 px-4 md:px-8 lg:px-16 xl:px-20">
+      <h1 className="pt-20 text-3xl font-medium md:text-4xl lg:text-5xl">
         Welcome to Stanq. I&apos;m Josh, and this is a React.js template
         bootstrapped with Shadcn UI, Typescript, Auth.js, Next.js App router,
         and React Query.
@@ -35,7 +35,7 @@ export const Hero: FC<HeroProps> = ({}) => {
         <Link
           href={`${siteConfig.github}/README.md`}
           className={cn(
-            "",
+            "px-0",
             buttonVariants({
               variant: "link",
             })
@@ -49,7 +49,11 @@ export const Hero: FC<HeroProps> = ({}) => {
       <p>Here&apos;s a random fact:</p>
 
       {isFetching && <Loader />}
-      {isFetched && data && <p>{data[0].fact}</p>}
+      {isFetched && data && (
+        <div className="rounded-md border-[#333] p-2 shadow dark:border">
+          <p>{data[0].fact}</p>
+        </div>
+      )}
     </section>
   )
 }
