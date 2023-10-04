@@ -70,7 +70,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <Providers>
-            <div className="relative flex min-h-screen flex-col">
+            <div className="relative flex min-h-[100svh] flex-col">
               <Header />
               <div className="flex-1">{children}</div>
               <Footer />

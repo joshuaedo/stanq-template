@@ -1,5 +1,6 @@
 "use client"
 
+import { siteConfig } from "@/config/site"
 import React, { FC } from "react"
 
 import { Icons } from "../Icons"
@@ -9,14 +10,12 @@ interface SignInFireWallProps {}
 
 const SignInFireWall: FC<SignInFireWallProps> = ({}) => {
   return (
-    <div className="flex h-[70vh] items-center justify-center rounded-md shadow md:px-6">
-      <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[25rem]">
-        <div className="flex flex-col space-y-2 text-center">
-          <Icons.logo className="mx-auto h-7 w-7" />
-          <h1 className="text-2xl font-semibold tracking-tight">Sign In</h1>
+    <div className="h-[65svh] w-full flex items-center justify-center">
+        <div className="space-y-3 p-7 md:p-8 lg:p-9 xl:p-10 text-center rounded-md shadow dark:border border-[#333]">
+          <Icons.logo className="mx-auto h-11 w-11" />
+          <h1 className="text-2xl font-semibold tracking-tight">Sign in to {siteConfig.title}</h1>
           <SignInWithGoogle />
         </div>
-      </div>
     </div>
   )
 }

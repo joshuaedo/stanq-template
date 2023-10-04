@@ -8,7 +8,7 @@ export const siteConfig = {
   creator: "Joshua Edo",
   siteName: "STANQ-Template",
   github: "https://github.com/joshuaedo/stanq",
-  images: [""],
+  images: ["https://joshuaedo.sirv.com/stanq/molecule-purple.png"],
   author: {
     name: "Joshua Edo",
     twitter: "https://twitter.com/thegr8joshua",

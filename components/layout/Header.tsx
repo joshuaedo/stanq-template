@@ -3,7 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { LogIn } from "lucide-react"
-import { useSession } from "next-auth/react"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/Button"
@@ -12,16 +11,24 @@ import { Icons } from "../Icons"
 
 import UserAuthNav from "../UserAuthNav"
 import { ThemeToggle } from "./ThemeToggle"
+import { useSession } from "next-auth/react"
 
 export function Header() {
   const session = useSession()
   const stanqUser = session?.data?.user
-  const { author } = siteConfig
+  const { images, author } = siteConfig
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-            <div className="general-sans font-semibold">
+            <div className="general-sans font-semibold flex gap-1.5">
+                <Image
+                  src={images[0]}
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  className="h-5 w-5 fill-current"
+                />
       <Link href="/">Stanq</Link>
     </div>
 
@@ -54,7 +61,7 @@ export function Header() {
               <Icons.gitHub className="h-5 w-5" />
             </Link>
 
-            {session ? (
+            {stanqUser ? (
               <UserAuthNav gUser={stanqUser} />
             ) : (
               <Link href="/sign-in">

@@ -1,36 +1,51 @@
-# STANQ-Template
-
+# Stanq-Template
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
+- [Frameworks](#frameworks)
+- [UI](#ui)
+- [Hooks and Utilities](#hooks-and-utilities)
+- [Code quality](#code-quality)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
-- [Authentication](#authentication)
-- [Contributing](#contributing)
 - [License](#license)
+- [Author](#author)
 
 ## Introduction
 
-Stanq a React.js template bootstrapped with Shadcn ui, Typescript, Auth.js, Next.js App router, and React Query.
+Stanq is a React.js template bootstrapped with Shadcn UI, Typescript, Auth.js, Next.js App router, and React Query.
 
-## Features
+### Frameworks
 
-- Typescript
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Icons from Lucide
-- Dark mode with next-themes
-- Shadcn UI
-- React Query
-- Tailwind CSS class sorting, merging and linting.
-- Auth.js authentication
+- [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
+- [Auth.js](https://authjs.dev/) – Handle user authentication with ease with providers like Google etc.
+- [React Query](https://tanstack.com/query) – Efficient data fetching and state management library for React applications
 
+### UI
 
-## Getting Started
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
+- [Radix](https://www.radix-ui.com/) – Primitives like modal, popover, etc. to build a stellar user experience
+- [Shadcn UI](https://ui.shadcn.com/) – Beautifully designed components that you can copy and paste into your app.
+- [Lucide](https://lucide.dev/) – Beautifully simple, pixel-perfect icons
+- [next/font](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
+- [next-themes](https://github.com/pacocoursey/next-themes) – A library for adding dark mode support to Next.js applications
 
-Follow these steps to set up and run stanq locally.
+### Hooks and Utilities
+
+- `useDate` – A custom React hook that provides information about the current date and time. It automatically updates every minute and returns an object with the current year and a greeting message based on the time of day.
+
+- `useDeviceSize` – A custom React hook that tracks the width and height of the window and updates them when the window is resized. It returns an array with the current width and height.
+
+- `useOnClickOutside` – A custom React hook that listens for clicks or touch events outside a specified element (provided as a ref). It invokes a handler function when a click or touch event occurs outside the element.
+
+- `cn` - A custom function that merges and formats CSS classes for easier class name management in React, particularly useful for Tailwind CSS integration.
+
+### Code Quality
+
+- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
+- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
+- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
 
 ### Prerequisites
 
@@ -41,28 +56,15 @@ Before you begin, ensure you have the following software installed:
 
 ### Usage
 
-1. Clone the repository:
+Follow these steps to set up and run stanq locally.
+
+1. Create a new project:
 
    ```bash
-   git clone https://github.com/joshuaedo/stanq-template.git
-   cd stanq-template
+   npx create-next-app --example https://github.com/joshuaedo/stanq-template
    ```
 
-1. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-1. Delete the .git folder
-
-1. Edit the name and version in the package.json
-
-1. Edit the project folder's name 
-
-1. Configure environment variables:
-
-   Create a `.env.local` file in the project root and add the following variables:
+ 2.  Create a `.env.local` file in the project root and add the following variables:
 
    ```env
    NEXTAUTH_SECRET=your_next_auth_secret
@@ -72,9 +74,9 @@ Before you begin, ensure you have the following software installed:
    NEXT_PUBLIC_NINJAS_API_KEY=api_key_from_ninjas_api
    ```
 
-   Replace the placeholders with your actual Firebase and Google OAuth credentials.
+   Replace the placeholders with your actual Next Auth and Google OAuth credentials.
 
-1. Run the development server:
+ 3. Run the development server:
 
    ```bash
    npm run dev
@@ -84,4 +86,8 @@ Before you begin, ensure you have the following software installed:
 
 ## License
 
-This project is licensed under the MIT [License](https://github.com/joshuaedo/stanq-template/LICENSE) 
+This project is licensed under the MIT [License](https://github.com/joshuaedo/stanq-template/LICENSE.md) 
+
+## Author
+
+- Joshua Edo ([joshuaedo.com](https://joshuaedo.com))
