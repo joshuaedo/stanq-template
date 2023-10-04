@@ -18,14 +18,13 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   twitter: Twitter,
-  logo: (props: LucideProps) => (
+  logo: (className: any) => (
                     <Image
                   src={images[0]}
                   alt={siteName}
                   width={100}
                   height={100}
-                  className="h-5 w-5 fill-current"
-{...props}
+                  className={className}
                 />
   ),
   gitHub: (props: LucideProps) => (
