@@ -7,7 +7,7 @@ export const siteConfig = {
   url: "https://stanq.joshuaedo.com",
   creator: "Joshua Edo",
   siteName: "STANQ-Template",
-  github: "https://github.com/joshuaedo/stanq",
+  github: "https://github.com/joshuaedo/stanq-template",
   images: ["https://joshuaedo.sirv.com/stanq/molecule-purple.png"],
   author: {
     name: "Joshua Edo",

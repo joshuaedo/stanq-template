@@ -35,7 +35,7 @@ export const Hero: FC<HeroProps> = ({}) => {
             Stanq is an opinionated collection of libraries, components, hooks, and
             utilities for your Next.js project. Read our{" "}
             <Link
-              href={`${siteConfig.github}/blob/main/README.md`}
+              href={`${siteConfig.github}#readme`}
               className="underline underline-offset-4"
             >
               docs
