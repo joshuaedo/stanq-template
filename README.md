@@ -86,7 +86,7 @@ Follow these steps to set up and run stanq locally.
 
 ## License
 
-This project is licensed under the MIT [License](https://github.com/joshuaedo/stanq-template/LICENSE.md) 
+This project is licensed under the MIT [License](https://github.com/joshuaedo/stanq-template/blob/main/LICENSE.md) 
 
 ## Author
 

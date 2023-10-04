@@ -15,6 +15,7 @@ export const Hero: FC<HeroProps> = ({}) => {
   const { data, isFetched, isFetching } = useQuery({
     queryFn: () => fetchFacts(),
     queryKey: ["facts"],
+    refetch: false,
     enabled: true,
   })
 
@@ -32,10 +33,10 @@ export const Hero: FC<HeroProps> = ({}) => {
         <div className="rounded-md border-[#333] p-4 shadow dark:border">
           <p className="uppercase font-semibold text-xs pb-1">About</p>
           <p className="text-sm">
-            Stanq is an opinionated collection of components, hooks, and
+            Stanq is an opinionated collection of libraries, components, hooks, and
             utilities for your Next.js project. Read our{" "}
             <Link
-              href={`${siteConfig.github}/README.md`}
+              href={`${siteConfig.github}/blob/main/README.md`}
               className="underline underline-offset-4"
             >
               docs
