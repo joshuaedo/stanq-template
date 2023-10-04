@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site"
+import Image from "next/image"
 import {
   LucideProps,
   Moon,
@@ -7,9 +7,10 @@ import {
   User,
   type Icon as LucideIcon,
 } from "lucide-react"
-import Image from "next/image"
 
-const {images, siteName} = siteConfig
+import { siteConfig } from "@/config/site"
+
+const { images, siteName } = siteConfig
 
 export type Icon = LucideIcon
 
@@ -19,13 +20,13 @@ export const Icons = {
   moon: Moon,
   twitter: Twitter,
   logo: (className: any) => (
-                    <Image
-                  src={images[0]}
-                  alt={siteName}
-                  width={100}
-                  height={100}
-                  className="mx-auto"
-                />
+    <Image
+      src={images[0]}
+      alt={siteName}
+      width={100}
+      height={100}
+      className="mx-auto"
+    />
   ),
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>

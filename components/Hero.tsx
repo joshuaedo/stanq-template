@@ -29,31 +29,33 @@ export const Hero: FC<HeroProps> = ({}) => {
       <p className="p-2 text-sm">Get started by editing app/page.tsx.</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-
-       <div className="rounded-md border-[#333] p-4 shadow dark:border">
-              <p className="uppercase font-semibold text-xs pb-1">About</p>
-          <p className="text-sm">Stanq is an opinionated collection of components, hooks, and utilities for your Next.js project. Read our <Link
-          href={`${siteConfig.github}/README.md`}
-          className="underline underline-offset-4"
-        >
-          docs
-        </Link>
-        .</p>    
-
+        <div className="rounded-md border-[#333] p-4 shadow dark:border">
+          <p className="uppercase font-semibold text-xs pb-1">About</p>
+          <p className="text-sm">
+            Stanq is an opinionated collection of components, hooks, and
+            utilities for your Next.js project. Read our{" "}
+            <Link
+              href={`${siteConfig.github}/README.md`}
+              className="underline underline-offset-4"
+            >
+              docs
+            </Link>
+            .
+          </p>
         </div>
 
-         <div className="rounded-md border-[#333] p-4 shadow dark:border">
-         {isFetching && <Loader />}
-         {isFetched && !isFetching && data && (
-          <>
-            <p className="uppercase font-semibold text-xs pb-1">Did you know?</p>
-          <p className="text-sm">{data[0].fact}</p>
-          </>
+        <div className="rounded-md border-[#333] p-4 shadow dark:border">
+          {isFetching && <Loader />}
+          {isFetched && !isFetching && data && (
+            <>
+              <p className="uppercase font-semibold text-xs pb-1">
+                Did you know?
+              </p>
+              <p className="text-sm">{data[0].fact}</p>
+            </>
           )}
         </div>
-
       </div>
-
     </section>
   )
 }

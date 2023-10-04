@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+
 import { siteConfig } from "@/config/site"
 import { bebasNeue, generalSans, inter } from "@/lib/fonts"
 import Footer from "@/components/layout/Footer"
@@ -61,11 +62,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <link rel="stylesheet" href={bebasNeue.variable} />
           <link rel="stylesheet" href={generalSans.variable} />
         </head>
-        <body
-          className={
-            inter.className
-}
-        >
+        <body className={inter.className}>
           <Providers>
             <div className="relative flex min-h-[100svh] flex-col bg-background">
               <Header />

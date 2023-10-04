@@ -1,7 +1,7 @@
-import { z } from "zod";
+import { z } from "zod"
 
 export const FactValidator = z.object({
-    fact: z.string()
+  fact: z.string(),
 })
 
-export type FactType = z.infer<typeof FactValidator>;
+export type FactType = z.infer<typeof FactValidator>

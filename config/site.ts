@@ -14,6 +14,8 @@ export const siteConfig = {
     twitter: "https://twitter.com/thegr8joshua",
     github: "https://github.com/joshuaedo",
     url: "https://joshuaedo.com",
-    images: ["https://joshuaedo.sirv.com/joshuaedo/public/images/original/me-modified.png"],
+    images: [
+      "https://joshuaedo.sirv.com/joshuaedo/public/images/original/me-modified.png",
+    ],
   },
 }
