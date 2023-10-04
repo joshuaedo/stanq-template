@@ -85,6 +85,8 @@ Follow these steps to set up and run stanq locally.
 
    The application should be accessible at `http://localhost:3000`.
 
+ 4: Either remove the Hero.tsx file and fetchFacts() function or include your Ninja API Key from https://api-ninjas.com to disable the errors.
+
 ## License
 
 This project is licensed under the MIT [License](https://github.com/joshuaedo/stanq-template/blob/main/LICENSE.md) 
