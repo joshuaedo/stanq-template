@@ -24,7 +24,7 @@ export const Icons = {
                   alt={siteName}
                   width={100}
                   height={100}
-                  className={className}
+                  className="mx-auto"
                 />
   ),
   gitHub: (props: LucideProps) => (

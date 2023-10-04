@@ -1,9 +1,7 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-
 import { siteConfig } from "@/config/site"
 import { bebasNeue, generalSans, inter } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
 import Footer from "@/components/layout/Footer"
 import { Header } from "@/components/layout/Header"
 import Providers from "@/components/layout/Providers"
@@ -64,13 +62,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <link rel="stylesheet" href={generalSans.variable} />
         </head>
         <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+          className={
             inter.className
-          )}
+}
         >
           <Providers>
-            <div className="relative flex min-h-[100svh] flex-col">
+            <div className="relative flex min-h-[100svh] flex-col bg-background">
               <Header />
               <div className="flex-1">{children}</div>
               <Footer />
