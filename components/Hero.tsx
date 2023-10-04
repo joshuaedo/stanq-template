@@ -15,8 +15,7 @@ export const Hero: FC<HeroProps> = ({}) => {
   const { data, isFetched, isFetching } = useQuery({
     queryFn: () => fetchFacts(),
     queryKey: ["facts"],
-    refetch: false,
-    enabled: true,
+    enabled: false,
   })
 
   return (
