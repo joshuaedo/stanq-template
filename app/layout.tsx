@@ -1,6 +1,5 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-
 import { siteConfig } from "@/config/site"
 import { bebasNeue, generalSans, inter } from "@/lib/fonts"
 import Footer from "@/components/layout/Footer"
@@ -43,12 +42,17 @@ export const generateMetadata = async ({}): Promise<Metadata> => {
         follow: false,
       },
     },
-    themeColor: [
+  }
+}
+
+export const viewport = {
+   themeColor: [
       { media: "(prefers-color-scheme: light)", color: "white" },
       { media: "(prefers-color-scheme: dark)", color: "black" },
     ],
-  }
-}
+  width: 'device-width',
+  initialScale: 1,
+};
 
 interface RootLayoutProps {
   children: React.ReactNode
